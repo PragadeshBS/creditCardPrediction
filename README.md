@@ -1,2 +1,2 @@
 # Credit card prediction
-Predict if user owns a credit card with SVM on Universal Bank dataset
+Predict if user is eligible for a credit card with SVM on Universal Bank dataset
