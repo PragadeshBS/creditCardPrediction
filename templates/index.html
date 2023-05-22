@@ -17,6 +17,17 @@
   <body>
     <div class="container">
       <h1>Credit Card Prediction</h1>
+      <div class="border my-3 p-2 rounded">
+        <h5>Tip</h5>
+        <div>
+          Press <kbd>Ctrl</kbd> + <kbd>y</kbd> to fill the form with sample
+          values to predict as 'Yes'
+        </div>
+        <div>
+          Press <kbd>Ctrl</kbd> + <kbd>i</kbd> to fill the form with sample
+          values to predict as 'No'
+        </div>
+      </div>
       <form action="{{url_for('predict')}}" method="POST">
         <div class="form-group">
           <label>Age:</label>
@@ -77,5 +88,49 @@
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+      const ageInput = document.querySelector("input[name=age]");
+      const experienceInput = document.querySelector("input[name=experience]");
+      const incomeInput = document.querySelector("input[name=income]");
+      const familyInput = document.querySelector("input[name=family]");
+      const ccAvgInput = document.querySelector("input[name=ccAvg]");
+      const educationInput = document.querySelector("input[name=education]");
+      const mortgageInput = document.querySelector("input[name=mortgage]");
+      const personalLoanInput = document.querySelector(
+        "input[name=personalLoan]"
+      );
+      const securitiesAccountInput = document.querySelector(
+        "input[name=securitiesAccount]"
+      );
+      const cdAccountInput = document.querySelector("input[name=cdAccount]");
+      const onlineInput = document.querySelector("input[name=online]");
+      document.addEventListener("keydown", function (event) {
+        if (event.ctrlKey && event.key === "y") {
+          ageInput.value = 36;
+          experienceInput.value = 11;
+          incomeInput.value = 183;
+          familyInput.value = 1;
+          ccAvgInput.value = 3.0;
+          educationInput.value = 3;
+          mortgageInput.value = 0;
+          personalLoanInput.value = 1;
+          securitiesAccountInput.value = 0;
+          cdAccountInput.value = 1;
+          onlineInput.value = 1;
+        } else if (event.ctrlKey && event.key === "i") {
+          ageInput.value = 25;
+          experienceInput.value = 1;
+          incomeInput.value = 49;
+          familyInput.value = 4;
+          ccAvgInput.value = 1.6;
+          educationInput.value = 1;
+          mortgageInput.value = 0;
+          personalLoanInput.value = 0;
+          securitiesAccountInput.value = 1;
+          cdAccountInput.value = 0;
+          onlineInput.value = 0;
+        }
+      });
+    </script>
   </body>
 </html>
