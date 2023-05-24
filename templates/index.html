@@ -17,17 +17,6 @@
   <body>
     <div class="container">
       <h1>Credit Card Prediction</h1>
-      <div class="border my-3 p-2 rounded">
-        <h5>Tip</h5>
-        <div>
-          Press <kbd>Ctrl</kbd> + <kbd>y</kbd> to fill the form with sample
-          values to predict as 'Yes'
-        </div>
-        <div>
-          Press <kbd>Ctrl</kbd> + <kbd>i</kbd> to fill the form with sample
-          values to predict as 'No'
-        </div>
-      </div>
       <form action="{{url_for('predict')}}" method="POST">
         <div class="form-group">
           <label>Age:</label>
@@ -85,6 +74,12 @@
         </div>
         <button type="submit" class="my-3 btn btn-primary">Submit</button>
       </form>
+      <div class="my-3 p-2 rounded text-muted" style="font-size: 0.7rem">
+        <div>
+          Ctrl + y to fill the form with sample values to predict as 'Yes'
+        </div>
+        <div>Ctrl + i for 'No'</div>
+      </div>
     </div>
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
